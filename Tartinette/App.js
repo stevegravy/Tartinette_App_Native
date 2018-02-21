@@ -1,22 +1,32 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import Children from './App/Components/Children';
+import Home from './App/Components/Home';
+import {Router, Scene} from 'react-native-router-flux';
+import Connect from "./App/Components/Connect";
 
 export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-
-      </View>
-    );
-  }
+    render() {
+        return (
+            <Router>
+                <Scene key="root">
+                    <Scene key="home"
+                           component={Home}
+                           title="Tartinette"
+                           initial
+                    />
+                    <Scene key="child"
+                           component={Children}
+                           title="Tartinette"
+                           hideNavBar
+                    />
+                    <Scene key="connexion"
+                           direction="vertical"
+                           component={Connect}
+                           title="Tartinette"
+                           hideNavBar
+                    />
+                </Scene>
+            </Router>
+        );
+    }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
