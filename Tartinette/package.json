@@ -20,8 +20,11 @@
   },
   "dependencies": {
     "expo": "^25.0.0",
+    "radio-button-react-native": "^1.1.6",
     "react": "16.2.0",
     "react-native": "0.52.0",
+    "react-native-radio-button-classic": "0.0.5",
+    "react-native-simple-radio-button": "^2.7.1",
     "react-router-native": "^4.2.0"
   }
 }

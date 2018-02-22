@@ -5,26 +5,27 @@ export default class  extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            email: 'Email Placeholder',
-            password: 'Password Placeholder'
+            email: '',
+            password: '',
         };
     }
 
     render() {
         return (
             <View style={styles.global}>
-                <Text>Connectez-vous</Text>
+                <Text style={styles.title}>Connectez-vous</Text>
                 <TextInput style={styles.input}
                            onChangeText={(email) => this.setState({email: email})}
                            placeholder='Email'
-                           underlineColorAndroid="transparent"/>
+                           underlineColorAndroid="#65BB50"/>
                 <TextInput style={styles.input}
                            onChangeText={(password) => this.setState({password: password})}
                            placeholder='Password'
-                           underlineColorAndroid="transparent"/>
+                           secureTextEntry={true}
+                           underlineColorAndroid="#65BB50"/>
                 <View style={styles.button}>
                     <TouchableOpacity style={styles.greenButton}>
-                        <Text>Connexion</Text>
+                        <Text style={styles.text}>Connexion</Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -41,7 +42,7 @@ const styles = StyleSheet.create({
     },
     greenButton: {
         height: 50,
-        width: 200,
+        width: 300,
         backgroundColor: '#65BB50',
         marginTop: 100,
         alignItems: 'center',
@@ -51,12 +52,19 @@ const styles = StyleSheet.create({
     },
     input: {
         height: 60,
-        borderColor: '#fff',
-        borderWidth: 1,
         marginTop: 20,
         padding: 20,
     },
     button: {
         alignItems:'center',
+    },
+    text: {
+        color: 'white',
+        fontSize: 24,
+    },
+    title: {
+        color: '#65BB50',
+        fontSize: 20,
+        fontWeight: 'bold',
     }
 })
