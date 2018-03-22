@@ -17,13 +17,11 @@ export default class App extends React.Component {
                     <Scene key="child"
                            component={Children}
                            title="Tartinette"
-                           hideNavBar
                     />
                     <Scene key="connexion"
                            direction="vertical"
                            component={Connect}
                            title="Tartinette"
-                           hideNavBar
                     />
                 </Scene>
             </Router>
